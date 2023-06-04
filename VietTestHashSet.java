@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package tx2_viettesthashset142;
+package viettesthashset;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author Dell Pc
  */
-public class TX2_VietTestHashSet142 {
+public class VietTestHashSet {
 
     
     public static void main(String[] args) {
