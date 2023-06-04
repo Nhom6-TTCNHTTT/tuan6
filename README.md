@@ -1,4 +1,5 @@
-# tuan6
-Ngo Dinh Viet: CompareByHocPhi.java, Demo.java, HocVien.java, HocVienDH.java
+# Tuần 6
+# Uông Văn Nhật: NhanVien.java, NhanVienSX.java, TreeMap.java
 
-Đặng Quốc Việt: HocVien.java, HocVienLT.java, VietTestHashSet.java
+# Ngô Đình Việt: CompareByHocPhi.java, Demo.java, HocVien.java, HocVienDH.java
+# Đặng Quốc Việt: HocVien.java, HocVienLT.java, VietTestHashSet.java
