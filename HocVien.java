@@ -1,73 +1,80 @@
-package Tuan6;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package tx2_viettesthashset142;
+import java.util.Scanner;
 import java.io.Serializable;
-import java.util.*;
 
-public abstract class HocVien implements Serializable{
-	protected String hoTen;
-	protected String diaChi;
-	protected int loaiCT;
-	protected int loaiUT;
-	public HocVien(String hoTen, String diaChi, int loaiCT, int loaiUT) {
-		this.hoTen = hoTen;
-		this.diaChi = diaChi;
-		this.loaiCT = loaiCT;
-		this.loaiUT = loaiUT;
-	}
-	public HocVien() {
-		super();
-	}
-	public String getHoTen() {
-		return hoTen;
-	}
-	public void setHoTen(String hoTen) {
-		this.hoTen = hoTen;
-	}
-	public String getDiaChi() {
-		return diaChi;
-	}
-	public void setDiaChi(String diaChi) {
-		this.diaChi = diaChi;
-	}
-	public int getLoaiCT() {
-		return loaiCT;
-	}
-	public void setLoaiCT(int loaiCT) {
-		this.loaiCT = loaiCT;
-	}
-	public int getLoaiUT() {
-		return loaiUT;
-	}
-	public void setLoaiUT(int loaiUT) {
-		this.loaiUT = loaiUT;
-		if(this.loaiUT == 0) {
-			System.out.println("Loi khi nhap UT bang 0");
-		}
-	}
-	
-	public void nhapThongTin() {
-		Scanner sc = new Scanner(System.in);
-		
-		do {
-			System.out.print("\nNhap vao ho ten : ");
-            setHoTen(sc.nextLine());
-		}while(hoTen.isEmpty());
-		 try {
-			 System.out.print("\nNhap vao dia chi : ");
-			  diaChi = sc.nextLine();        
-	          System.out.print("\nNhap vao loai chuong trinh (1: Do hoa; 2. Lap trinh): ");
-	          setLoaiCT(sc.nextInt());
-	          System.out.print("\nNhap vao loai uu tien : ");
-	          setLoaiUT((sc.nextInt()));
-		 }catch (Exception ex){
-			 System.out.println(ex);
-		 }
-			
-	}
-	public void inThongTin() {
-		System.out.print(String.format("\n%20s %20s %20s %20s %20.2f", hoTen, diaChi,loaiCT == 1 ? "Do hoa" : "Lap trinh", loaiUT == 1 ? "Loai 1" : "Loai 2", hocPhi()));
+/**
+ *
+ * @author Dell Pc
+ */
+public abstract class HocVien implements Serializable {
+    protected String HoTen;
+    protected String DiaChi;
+    protected String LoaiCT;
+    protected int LoaiUT;
 
-	}
-	public abstract double hocPhi() ;
-		
-	
+    public HocVien() {
+    }
+
+    public HocVien(String HoTen, String DiaChi, String LoaiCT, int LoaiUT) {
+        this.HoTen = HoTen;
+        this.DiaChi = DiaChi;
+        this.LoaiCT = LoaiCT;
+        this.LoaiUT = LoaiUT;
+    }
+
+    public String getHoTen() {
+        return HoTen;
+    }
+
+    public String getDiaChi() {
+        return DiaChi;
+    }
+
+    public String getLoaiCT() {
+        return LoaiCT;
+    }
+
+    public int getLoaiUT() {
+        return LoaiUT;
+    }
+
+    public void setHoTen(String HoTen) {
+        this.HoTen = HoTen;
+    }
+
+    public void setDiaChi(String DiaChi) {
+        this.DiaChi = DiaChi;
+    }
+
+    public void setLoaiCT(String LoaiCT) {
+        this.LoaiCT = LoaiCT;
+    }
+
+    public void setLoaiUT(int LoaiUT) {
+        this.LoaiUT = LoaiUT;
+    }
+    
+    public void Nhap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap ho ten: ");
+        HoTen = sc.nextLine();
+        System.out.println("Nhap dia chi: ");
+        DiaChi = sc.nextLine();
+        System.out.println("Nhap loai chuong trinh: ");
+        LoaiCT = sc.nextLine();
+        System.out.println("Nhap loai uu tien: ");
+        LoaiUT = sc.nextInt();
+        
+    }
+    
+    public void Xuat() {
+        System.out.printf("\n%20s %20s %20s %20s %20s", HoTen, DiaChi, LoaiCT, LoaiUT, hocPhi());
+    }
+    
+    public abstract double hocPhi();
+    
 }
